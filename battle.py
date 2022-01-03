@@ -1,7 +1,7 @@
 import pygame
 import random
 import button
-
+#from plyaysound import playsound
 pygame.init()
 
 clock = pygame.time.Clock()
@@ -15,6 +15,8 @@ screen_height = 400 + bottom_panel
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Battle')
 
+#music files
+#playsound('audio.mp3')
 
 #define game variables
 current_fighter = 1
@@ -231,10 +233,10 @@ class DamageText(pygame.sprite.Sprite):
 
 damage_text_group = pygame.sprite.Group()
 
-
-knight = Fighter(200, 260, 'Knight', 3, 10, 3)
-bandit1 = Fighter(550, 270, 'Bandit', 20, 6, 1)
-bandit2 = Fighter(700, 270, 'Bandit', 20, 6, 1)
+#use these lines to edit player health
+knight = Fighter(200, 260, 'Knight', 15, 10, 3)
+bandit1 = Fighter(550, 270, 'Bandit', 10, 6, 1)
+bandit2 = Fighter(700, 270, 'Bandit', 10, 6, 1)
 
 bandit_list = []
 bandit_list.append(bandit1)
